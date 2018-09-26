@@ -61,7 +61,7 @@ authors:
 width: normal
 
 # if you don't need pagination, comment the *paginate* configs below
-paginate: 5
+paginate: 6
 paginate_path: "/:num/"
 
 # if you don't need projects, comment the *projects* configs below
