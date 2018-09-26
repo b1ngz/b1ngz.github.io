@@ -1,6 +1,5 @@
 # main text of home
 name: b1ngz
-bio: A Man Who Is Finding The Way Home
 
 # twitter summary info
 description: A blog about technology and life
@@ -11,7 +10,6 @@ external-image: false
 picture: assets/images/profile.jpg
 
 url: https://b1ngz.github.io
-# your url: http://USERNAME.github.io
 
 permalink: /:title/
 
@@ -63,7 +61,7 @@ authors:
 width: normal
 
 # if you don't need pagination, comment the *paginate* configs below
-paginate: 10
+paginate: 5
 paginate_path: "/:num/"
 
 # if you don't need projects, comment the *projects* configs below
