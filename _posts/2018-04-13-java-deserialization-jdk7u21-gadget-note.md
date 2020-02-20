@@ -12,6 +12,9 @@ author: b1ngz
 description: Java反序列 Jdk7u21 Payload 学习笔记
 ---
 
+Update
+
+- 2020-02-20: Fix `AnnotationInvocationHandler` mitigation mistake in Part `0x03 修复方案`
 
 # 0x00 简介
 
@@ -636,31 +639,13 @@ LinkedHashSet.readObject()
 
 # 0x 03 修复方案
 
-在 jdk > 7u21 的版本，修复了这个漏洞，看了下 7u79 的代码，`AnnotationInvocationHandler` 的构造方法，增加了对参数的校验，type 必须为 Annotation，所以会导致原有 payload 执行失败
+2020-02-20 Update
 
-修复前 ：
+在 jdk > 7u21 的版本，修复了这个漏洞，看了下 7u79 的代码，`AnnotationInvocationHandler` 的 `readObject()` 方法增加了异常抛出，导致反序列化失败
 
-```java
-   AnnotationInvocationHandler(Class<? extends Annotation> var1, Map<String, Object> var2) {
-        this.type = var1;
-        this.memberValues = var2;
-    }
-```
+![image](/assets/images/deserialization-jdk7u21/AnnotationInvocationHandler-fix.png)
 
-修复后：
 
-```java
-    AnnotationInvocationHandler(Class<? extends Annotation> var1, Map<String, Object> var2) {
-        Class[] var3 = var1.getInterfaces();
-        // 增加了 if 判断条件
-        if (var1.isAnnotation() && var3.length == 1 && var3[0] == Annotation.class) {
-            this.type = var1;
-            this.memberValues = var2;
-        } else {
-            throw new AnnotationFormatError("Attempt to create proxy for a non-annotation type.");
-        }
-    }
-```
 
 # 0x 04 参考资料
 
