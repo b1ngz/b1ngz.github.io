@@ -1,4 +1,5 @@
 <div class="social-links">
+
     {% if site.facebook %}
         <a class="link" data-title="facebook.com/{{ site.facebook }}" href="http://facebook.com/{{ site.facebook }}" target="_blank">
             <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
@@ -62,6 +63,12 @@
     {% if site.vimeo %}
         <a class="link" data-title="vimeo.com/{{ site.vimeo }}" href="https://vimeo.com/{{ site.vimeo }}" target="_blank">
             <svg class="icon icon-vimeo"><use xlink:href="#icon-vimeo"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.weibo %}
+        <a class="link" data-title="weibo.com/{{ site.weibo }}" href="https://weibo.com/{{ site.weibo }}" target="_blank">
+            <svg class="icon icon-weibo"><use xlink:href="#icon-weibo"></use></svg>
         </a>
     {% endif %}
 
