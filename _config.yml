@@ -93,7 +93,7 @@ sass:
     sass_dir: _sass
     style: :compressed
 
-gems:
+plugins:
   - jemoji
   - jekyll-mentions
   - jekyll-seo-tag
@@ -101,6 +101,7 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-seo-tag
 
 jekyll-mentions:
     base_url: https://github.com

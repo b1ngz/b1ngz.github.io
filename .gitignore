@@ -1,3 +1,5 @@
+.jekyll-cache
+.ruby-version
 .DS_Store
 _site
 .sass-cache
