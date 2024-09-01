@@ -3,4 +3,8 @@ title: About
 layout: page
 ---
 
-b1ngzz
+
+
+欢迎关注
+
+  ![mp-weixin](/assets/images/mp-weixin/qrcode.png){: width="300" }
