@@ -107,3 +107,7 @@ plugins:
 
 jekyll-mentions:
     base_url: https://github.com
+
+strict_front_matter: true
+liquid:
+  error_mode: strict
